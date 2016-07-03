@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+
 #import "ViewController.h"
+#import "WLSnakeGameController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  ViewController *vc = [ViewController new];
+  WLSnakeGameController *vc = [[WLSnakeGameController alloc] initWithRows:5 andCount:5];
   self.window.rootViewController = vc;
   [self.window makeKeyAndVisible];
   return YES;
